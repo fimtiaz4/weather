@@ -55,7 +55,7 @@ function getWeather(city) {
       document.getElementById("feels_like").textContent = `Feels Like: ${feels_like}`;
       document.getElementById("temp_min").textContent = `Temp Min: ${temp_min}\u00B0C`;
       document.getElementById("temp_max").textContent = `Temp max: ${temp_max}\u00B0C`;
-      document.getElementById("speed").textContent = `Wind Speed: ${speed}`;
+      document.getElementById("speed").textContent = `Wind Speed: ${speed}m/s SSE`;
       document.getElementById("sunrise").textContent = `Sunrise: ${forSunrise}`;
       document.getElementById("sunset").textContent = `Sunset: ${forsunset}`;
       document.getElementById("time").textContent = `Time: ${time11}`;
