@@ -41,6 +41,7 @@ function getWeather(city) {
       const sunrise = data.sys.sunrise;
       const sunset = data.sys.sunset;
       const dt = data.dt;
+      const humidity = data.main.humidity;
       let forSunrise = formatTime(sunrise);
       let forsunset = formatTime(sunset);
       const timeAndDate = getTimeAndDate(dt);
@@ -49,16 +50,17 @@ function getWeather(city) {
 
       // Display weather information
       document.getElementById("cityName").textContent = `Weather in ${cityName}:`;
-      document.getElementById("temperature").textContent = `Temperature: ${temperature}°C`;
+      document.getElementById("temperature").textContent = `Temperature: ${temperature}\u00B0C`;
       document.getElementById("description").textContent = `Description: ${description}`;
       document.getElementById("feels_like").textContent = `Feels Like: ${feels_like}`;
-      document.getElementById("temp_min").textContent = `Temp Min: ${temp_min}`;
-      document.getElementById("temp_max").textContent = `Temp max: ${temp_max}`;
+      document.getElementById("temp_min").textContent = `Temp Min: ${temp_min}\u00B0C`;
+      document.getElementById("temp_max").textContent = `Temp max: ${temp_max}\u00B0C`;
       document.getElementById("speed").textContent = `Wind Speed: ${speed}`;
       document.getElementById("sunrise").textContent = `Sunrise: ${forSunrise}`;
       document.getElementById("sunset").textContent = `Sunset: ${forsunset}`;
       document.getElementById("time").textContent = `Time: ${time11}`;
       document.getElementById("date").textContent = `Date: ${date11}`;
+      document.getElementById("humidity").textContent = `Humidity: ${humidity}%`;
 
       // Show weather information container
       //  document.getElementById("weatherInfo").style.display = "block";
